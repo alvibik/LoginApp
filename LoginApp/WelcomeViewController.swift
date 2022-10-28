@@ -15,13 +15,11 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         welcomeLabel.text = "Welcome, \(username ?? "ananymous")!"
     }
     
     @IBAction func logOut() {
         dismiss(animated: true)
     }
-     
 }
 
