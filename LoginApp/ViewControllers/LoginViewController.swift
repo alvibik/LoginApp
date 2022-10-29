@@ -7,13 +7,13 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    private let username = "User"
-    private let password = "Password"
+    private let userName = "User"
+    private let passWord = "Password"
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -21,17 +21,36 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        if usernameTextField.text != username || passwordTextField.text != password {
-            showAlert(with: "Ooops!", and: "Username or password is Wrong!😡")
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.username = userName
+            } else if let navigationVC = viewController as? UINavigationController {
+                
+            }
         }
-        welcomeVC.username = usernameTextField.text
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.username = userName
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.username = userName
+//    }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         usernameTextField.text = ""
         passwordTextField.text = ""
     }
+    
+    @IBAction func logining(_ sender: UIButton) {
+        guard usernameTextField.text == userName, passwordTextField.text == passWord else {
+            showAlert(with: "Ooops!", and: "Username or password is Wrong!😡")
+            return
+        }
+        performSegue(withIdentifier: "goToWelcome", sender: nil)
+    }
+    
     
     @IBAction func getUserName() {
         showAlert(with: "Ooops !", and: "Your username is User 😜")
