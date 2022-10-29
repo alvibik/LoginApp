@@ -49,7 +49,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot User Name?"/>
                                         <connections>
-                                            <action selector="getUserName" destination="BYZ-38-t0r" eventType="touchUpInside" id="tJY-gg-uIh"/>
+                                            <action selector="getUserName" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLm-ul-Vuw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Teh-6t-4eJ">
@@ -58,7 +58,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot Password?"/>
                                         <connections>
-                                            <action selector="getPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="4oL-tL-Uk4"/>
+                                            <action selector="getPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="RzO-bi-I9O"/>
                                         </connections>
                                     </button>
                                 </subviews>
