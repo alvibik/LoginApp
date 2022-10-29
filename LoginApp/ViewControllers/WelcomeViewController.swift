@@ -9,13 +9,15 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     
-    var username = ""
+    var username = User(person: Person())
+    let person = Person()
+    
     
     @IBOutlet var welcomeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome, \(username)!"
+        welcomeLabel.text = "Welcome, \(person.fullname)!"
     }
     
     @IBAction func logOut() {

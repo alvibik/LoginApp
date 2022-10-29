@@ -6,26 +6,18 @@
 //
 
 struct User {
-    private let username: String
-    private let password: String
-    private let person: Person
-    
-    static func setupLogonData() -> User {
-        User(username: "PushkinAS", password: "Arina", person: Person.setupPerson())
-    }
+    let username = "User"
+    let password = "Password"
+    let person: Person
 }
 
 struct Person {
-    private let name: String
-    private let surname: String
-    private let bio: String
-    
-    static func setupPerson() -> Person {
-        Person(
-            name: "Александр",
-            surname: "Пушкин",
-            bio: """
-            
-            """)
+    let name = "Alexandr"
+    let surname = "Bikteev"
+    var fullname: String {
+        "\(name) \(surname)"
     }
+    let age = 34
+    let bio = """
+"""
 }

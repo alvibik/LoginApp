@@ -12,8 +12,10 @@ final class LoginViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    private let userName = "User"
-    private let passWord = "Password"
+//    private let userName = "User"
+//    private let passWord = "Password"
+    
+    private let user = User(person: Person())
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -25,9 +27,10 @@ final class LoginViewController: UIViewController {
         guard let viewControllers = tabBarVC.viewControllers else { return }
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.username = userName
+                welcomeVC.username = user
             } else if let navigationVC = viewController as? UINavigationController {
-                
+                guard let personVC = navigationVC.topViewController as? PersonViewController else { return }
+                personVC.title = user.username
             }
         }
 //        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
@@ -44,7 +47,7 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func logining(_ sender: UIButton) {
-        guard usernameTextField.text == userName, passwordTextField.text == passWord else {
+        guard usernameTextField.text == user.username, passwordTextField.text == user.password else {
             showAlert(with: "Ooops!", and: "Username or password is Wrong!😡")
             return
         }
@@ -53,11 +56,11 @@ final class LoginViewController: UIViewController {
     
     
     @IBAction func getUserName() {
-        showAlert(with: "Ooops !", and: "Your username is User 😜")
+        showAlert(with: "Ooops !", and: "Your username is \(user.username) 😜")
     }
     
     @IBAction func getPassword() {
-        showAlert(with: "Ooops!", and: "Your password is Password 🤪")
+        showAlert(with: "Ooops!", and: "Your password is \(user.password) 🤪")
     }
 }
     

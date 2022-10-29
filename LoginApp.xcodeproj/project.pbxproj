@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C13BBEF2290D4CCA00249B51 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13BBEF1290D4CCA00249B51 /* PersonViewController.swift */; };
 		C1AA41BC290B9CDC00367BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AA41BB290B9CDC00367BED /* AppDelegate.swift */; };
 		C1AA41BE290B9CDC00367BED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AA41BD290B9CDC00367BED /* SceneDelegate.swift */; };
 		C1AA41C0290B9CDC00367BED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AA41BF290B9CDC00367BED /* LoginViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C13BBEF1290D4CCA00249B51 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		C1AA41B8290B9CDC00367BED /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AA41BB290B9CDC00367BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1AA41BD290B9CDC00367BED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				C1AA41BF290B9CDC00367BED /* LoginViewController.swift */,
 				C1AA41CF290BA3B200367BED /* WelcomeViewController.swift */,
+				C13BBEF1290D4CCA00249B51 /* PersonViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1AA41C0290B9CDC00367BED /* LoginViewController.swift in Sources */,
+				C13BBEF2290D4CCA00249B51 /* PersonViewController.swift in Sources */,
 				C1AA41D0290BA3B200367BED /* WelcomeViewController.swift in Sources */,
 				C1AA41BC290B9CDC00367BED /* AppDelegate.swift in Sources */,
 				C1B67A4E290D1D2700B1A195 /* User.swift in Sources */,
